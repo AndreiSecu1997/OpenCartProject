@@ -15,9 +15,9 @@ Feature:Add Product To Cart
     When user access the "Cart" Page
     Then "<quantity>" units of "<product>" were added to cart
     Examples:
-      | category      | product                            | quantity |
-      | Computers     | AnewProduct                        | 5        |
-      | Desktops      | camera                             | 4        |
+      | category  | product     | quantity |
+      | Computers | AnewProduct | 5        |
+      | Desktops  | camera      | 4        |
 
   @Regression
   Scenario Outline: Login and add a valid unit's quantity of a <product> to cart
@@ -31,9 +31,9 @@ Feature:Add Product To Cart
     When user access the "Cart" Page
     Then "<quantity>" units of "<product>" were added to cart
     Examples:
-      | category      | product                            | quantity |
-      | Computers     | AnewProduct                        | 7        |
-      | Desktops      | camera                             | 4        |
+      | category  | product     | quantity |
+      | Computers | AnewProduct | 7        |
+      | Desktops  | camera      | 4        |
 
 
   @Regression
@@ -51,9 +51,7 @@ Feature:Add Product To Cart
     Examples:
       | category      | product                            | quantity          |
       | Computers     | AnewProduct                        | 0                 |
-      | Computers     | MyProduct                          | 12356452342342132 |
-      | Computers     | NMProduct                          | zzzzz             |
-      | Desktops      | camera                             | @#@#$#            |
+      | Desktops      | camera                             | 12356452342342132 |
       | Desktops      | Change thermal paste for processor | </input>          |
       | Desktops      | camera                             | ASDSDAS           |
       | Mobile Phones | Change thermal paste for processor | -24               |
