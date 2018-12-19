@@ -38,7 +38,7 @@ public class WebDriverManager {
         eventDriver = new EventFiringWebDriver(driver);
         loggerUtil = new LoggerUtil();
         eventDriver.register(loggerUtil);
-        return eventDriver;
+        return driver;
     }
 
     public WebDriver getDriver() {
