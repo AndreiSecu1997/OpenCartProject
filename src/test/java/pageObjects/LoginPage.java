@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import java.time.LocalDate;
 
 public class LoginPage extends Page {
-    private final String pageURL = "http://172.16.41.26/index.php?route=account/login";
+    private final String pageURL = "http://172.16.41.76/index.php?route=account/login";
 
     @FindBy(css = "input[name=\"email\"]")
     private WebElement emailField;

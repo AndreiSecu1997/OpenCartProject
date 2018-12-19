@@ -16,7 +16,7 @@ public class HomePage extends Page {
     @FindBy(css = "#slideshow0 > div > div.swiper-slide> a > img")
     private List<WebElement> sliderProducts;
 
-    private final String pageURL = "http://172.16.41.26";
+    private final String pageURL = "http://172.16.41.76";
 
     public HomePage(WebDriver driver){
         super(driver);

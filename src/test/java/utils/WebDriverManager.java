@@ -14,7 +14,7 @@ public class WebDriverManager {
     private WebDriver driver;
     private static DriverType driverType;
     private EventFiringWebDriver eventDriver;
-
+    private LoggerUtil loggerUtil;
     public WebDriverManager() {
         new TestDataFileReaders();
         driverType = TestDataFileReaders.getBrowser();
@@ -34,7 +34,11 @@ public class WebDriverManager {
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
-        return driver;
+
+        eventDriver = new EventFiringWebDriver(driver);
+        loggerUtil = new LoggerUtil();
+        eventDriver.register(loggerUtil);
+        return eventDriver;
     }
 
     public WebDriver getDriver() {

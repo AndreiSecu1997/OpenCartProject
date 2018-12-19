@@ -8,7 +8,7 @@ public class RegisterPage extends Page {
     public RegisterPage(WebDriver driver) {
         super(driver);
     }
-    private final String pageURL = "http://172.16.41.26/index.php?route=account/register";
+    private final String pageURL = "http://172.16.41.76/index.php?route=account/register";
     private String urlSpecificText = "route=account/register";
 
     @FindBy(css = "input[name=\"firstname\"]")

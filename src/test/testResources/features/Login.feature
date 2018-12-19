@@ -7,7 +7,7 @@ Feature: Login
     And perform login process using valid credentials
     Then user is on user's account page
 
-  @LoginNegative @Regression
+  @Login Negative @Regression
   Scenario Outline: Log in the system using invalid <key>
     Given user is on "Home" page
     When user access the "Login" Page
