@@ -11,9 +11,14 @@ Feature: Add product to Wish List
     Then on the page is displayed a success message
 
     Examples:
-      | page     | category  | product                            |
-      | Home     | Computers | camera                             |
-      | Register   | Desktops  | Change thermal paste for processor |
-      | Register | Computers | camera                             |
+      | page     | category      | product                 |
+      | Home     | Tablets       | Samsung Galaxy Tab 10.1 |
+      | Home     | Phones & PDAs | Palm Treo Pro           |
+      | Home     | Cameras       | Canon EOS 5D            |
+      | Register | Tablets       | Samsung Galaxy Tab 10.1 |
+      | Register | Phones & PDAs | Palm Treo Pro           |
+      | Register | Cameras       | Canon EOS 5D            |
+      | Login    | Phones & PDAs | Palm Treo Pro           |
+      | Login    | Cameras       | Nikon D300              |
 
 

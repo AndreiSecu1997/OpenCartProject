@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
         features = "C:\\Users\\asecu\\IdeaProjects\\OpenCartProject\\src\\test\\testResources\\features",
         glue = "stepDefinitions",
         snippets = SnippetType.CAMELCASE,
-        tags = "@Login",
-        plugin = {"pretty", "html:target/cucumber-reports"}
+        tags = "",
+        plugin = {"pretty", "html:target/cucumber-reports","junit:target/cucumber-reports/Cucumber.xml"}
 )
 public class Runner {
 }

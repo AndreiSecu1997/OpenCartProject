@@ -63,8 +63,9 @@ public class Page {
             Method clickOn = clazz.getDeclaredMethod("access" + pageName + "Page");
             clickOn.setAccessible(true);
             clickOn.invoke(clazz.getConstructor(WebDriver.class).newInstance(driver));
-        } catch (Exception e) {
-            throw new RuntimeException("No such method in the Page class");
+        }
+        catch (InstantiationException | InvocationTargetException | NoSuchMethodException | IllegalAccessException | ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 

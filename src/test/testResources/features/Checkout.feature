@@ -1,5 +1,5 @@
 Feature: Checkout
-@checkout
+@Checkout
   Scenario Outline:Buy the available <product> product
     Given user is on "Home" page
     When user cliks on "<product>" product from Featured

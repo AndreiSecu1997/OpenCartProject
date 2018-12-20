@@ -15,9 +15,9 @@ Feature:Add Product To Cart
     When user access the "Cart" Page
     Then "<quantity>" units of "<product>" were added to cart
     Examples:
-      | category  | product     | quantity |
-      | Computers | AnewProduct | 5        |
-      | Desktops  | camera      | 4        |
+      | category      | product                 | quantity |
+      | Tablets       | Samsung Galaxy Tab 10.1 | 4        |
+      | Phones & PDAs | Palm Treo Pro           | 5        |
 
   @Regression
   Scenario Outline: Login and add a valid unit's quantity of a <product> to cart
@@ -31,9 +31,9 @@ Feature:Add Product To Cart
     When user access the "Cart" Page
     Then "<quantity>" units of "<product>" were added to cart
     Examples:
-      | category  | product     | quantity |
-      | Computers | AnewProduct | 7        |
-      | Desktops  | camera      | 4        |
+      | category      | product                 | quantity |
+      | Tablets       | Samsung Galaxy Tab 10.1 | 2        |
+      | Phones & PDAs | Palm Treo Pro           | 1        |
 
 
   @Regression
@@ -49,12 +49,13 @@ Feature:Add Product To Cart
     And user access the "Cart" Page
     Then "<product>" product is not found on Category page
     Examples:
-      | category      | product                            | quantity          |
-      | Computers     | AnewProduct                        | 0                 |
-      | Desktops      | camera                             | 12356452342342132 |
-      | Desktops      | Change thermal paste for processor | </input>          |
-      | Desktops      | camera                             | ASDSDAS           |
-      | Mobile Phones | Change thermal paste for processor | -24               |
+      | category      | product                 | quantity          |
+      | Tablets       | Samsung Galaxy Tab 10.1 | Palm Treo Pro     |
+      | Phones & PDAs | Palm Treo Pro           | Nikon D300        |
+      | Cameras       | Canon EOS 5D            | 0                 |
+      | Tablets       | Samsung Galaxy Tab 10.1 | 12356452342342132 |
+      | Phones & PDAs | Palm Treo Pro           | </input>          |
+      | Cameras       | Canon EOS 5D            | -24               |
 
 
   @Regression
@@ -68,16 +69,13 @@ Feature:Add Product To Cart
     And user access the "Cart" Page
     Then "<product>" product is not found on Category page
     Examples:
-      | category      | product                            | quantity          |
-      | Computers     | AnewProduct                        | 0                 |
-      | Computers     | MyProduct                          | 12356452342342132 |
-      | Computers     | NMProduct                          | zzzzz             |
-      | Desktops      | camera                             | @#@#$#            |
-      | Desktops      | Change thermal paste for processor | </input>          |
-      | Mobile Phones | Change thermal paste for processor |                   |
-      | Desktops      | camera                             | ASDSDAS           |
-      | Mobile Phones | Change thermal paste for processor | -24               |
-      | Desktops      | camera                             | 14+1              |
+      | category      | product                 | quantity          |
+      | Tablets       | Samsung Galaxy Tab 10.1 | Palm Treo Pro     |
+      | Phones & PDAs | Palm Treo Pro           | Nikon D300        |
+      | Cameras       | Canon EOS 5D            | 0                 |
+      | Tablets       | Samsung Galaxy Tab 10.1 | 12356452342342132 |
+      | Phones & PDAs | Palm Treo Pro           | </input>          |
+      | Cameras       | Canon EOS 5D            | -24               |
 
 
 

@@ -41,7 +41,7 @@ public class CheckoutPage extends Page {
     @FindBy(id = "button-payment-address")
     private WebElement continueButton;
 
-    @FindBy(id = "button-shipping-address")
+    @FindBy(css = "#button-shipping-address")
     private WebElement shippingAddressButton;
 
     @FindBy(id = "button-shipping-method")
