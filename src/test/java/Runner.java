@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         glue = "stepDefinitions",
         snippets = SnippetType.CAMELCASE,
         tags = "",
-        plugin = {"pretty", "html:target/cucumber-reports","junit:target/cucumber-reports/Cucumber.xml"}
+        plugin = {"pretty", "html:target/cucumber-reports"}
 )
 public class Runner {
 }
